@@ -1,11 +1,11 @@
 import numpy as np
 import streamlit as st
 
-from src.credit_risk_modeling.charts.draw import (
+from credit_risk_modelling.charts.draw import (
     get_cumulative_distribution_function_chart,
     get_probability_density_function_chart,
 )
-from src.credit_risk_modeling.fe.utils import change_language, get_language
+from credit_risk_modelling.front_end.utils import change_language, get_language
 
 
 st.set_page_config(page_title="Getting started")

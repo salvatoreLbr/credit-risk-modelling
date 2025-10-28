@@ -1,18 +1,16 @@
-from src.credit_risk_modeling.charts.draw import (
-    draw_plot,
+import numpy as np
+
+from credit_risk_modelling.charts.draw import (
     get_cumulative_distribution_function_chart,
-    get_probability_density_function_chart,
 )
-from src.credit_risk_modeling.distributions.binomial import (
+from credit_risk_modelling.distributions.binomial import (
     indipendent_binomial_loss_distribution_analytic,
     indipendent_binomial_loss_distribution_simulation,
 )
-from src.credit_risk_modeling.metrics.risk_measures import (
+from credit_risk_modelling.metrics.risk_measures import (
     compute_risk_measure_analytic,
     compute_risk_measures_simulation,
 )
-
-import numpy as np
 
 
 if __name__ == "__main__":
@@ -28,9 +26,7 @@ if __name__ == "__main__":
     # c = np.load('exposures.npy')
     # p = np.ones(100)*0.01
     c = np.ones(100) * 10
-    sorted_loss_distribution = indipendent_binomial_loss_distribution_simulation(
-        n, m, p, c
-    )
+    sorted_loss_distribution = indipendent_binomial_loss_distribution_simulation(n, m, p, c)
     (
         expected_loss,
         stdev_loss,

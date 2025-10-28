@@ -6,19 +6,19 @@
     "configurations": [
         {
             "name": "Python: Current File",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": false,
-            // "cwd": "${workspaceFolder}",
-            // "env": {"PYTHONPATH": "${cwd}"}
+            "cwd": "${workspaceFolder}",
+            "env": {"PYTHONPATH": "${cwd}"}
             // // // // // // // // // // // // // // // // // // 
             // // // //  part for running streamlit // // // // // 
-            // "program": ".venv/Scripts/streamlit.exe",  // /home/xx/tmp/venv/bin/streamlit",
+            // "program": ".venv/bin/streamlit",         // Per WSL
             // "args": [
             //     "run",
-            //     "src/credit_risk_modeling/Home.py"
+            //     "src/credit_risk_modeling/app.py"
             // ]
         }
     ]

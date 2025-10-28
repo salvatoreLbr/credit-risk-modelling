@@ -1,17 +1,16 @@
+
 import matplotlib.pyplot as plt
 import numpy as np
-import seaborn as sns
 import streamlit as st
-from typing import Dict, Optional
 
 
 def draw_plot(
     series1: np.array,
     series2: np.array,
-    label: Optional[str]=None,
-    title: Optional[str]=None,
-    plot_chart_streamlit: Optional[bool]=False,
-    plot_chart_local: Optional[bool]=False,
+    label: str | None = None,
+    title: str | None = None,
+    plot_chart_streamlit: bool | None = False,
+    plot_chart_local: bool | None = False,
 ):
     # plotting CDF
     fig, ax = plt.subplots()
@@ -26,15 +25,14 @@ def draw_plot(
         fig.show()
 
 
-
 def draw_vertical_line(
     ax: plt,
     x: float,
-    ymin: Optional[float] = 0,
-    ymax: Optional[float] = 1,
-    color: Optional[str] = "r",
-    label: Optional[str] = "",
-    linestyle: Optional[str] = "solid",
+    ymin: float | None = 0,
+    ymax: float | None = 1,
+    color: str | None = "r",
+    label: str | None = "",
+    linestyle: str | None = "solid",
 ):
     """Function for adding a vertical line to a chart.
 
@@ -59,9 +57,9 @@ def get_probability_density_function_chart(
     distribution_value: np.array,
     plot_chart_streamlit: bool,
     plot_chart: bool,
-    bins: Optional[int] = 30,
-    title: Optional[str] = "Distribution",
-    vertical_line_dict: Optional[Dict] = {},
+    bins: int | None = 30,
+    title: str | None = "Distribution",
+    vertical_line_dict: dict | None = {},
 ):
     """Draw a histogram (PDF)"""
     fig, ax = plt.subplots()
@@ -93,9 +91,9 @@ def get_cumulative_distribution_function_chart(
     distribution_value: np.array,
     plot_chart_streamlit: bool,
     plot_chart: bool,
-    bins: Optional[int] = 30,
-    title: Optional[str] = "Distribution",
-    vertical_line_dict: Optional[Dict] = {},
+    bins: int | None = 30,
+    title: str | None = "Distribution",
+    vertical_line_dict: dict | None = {},
 ):
     """Draw a CDF chart."""
     count, bins = get_probability_density_function_chart(

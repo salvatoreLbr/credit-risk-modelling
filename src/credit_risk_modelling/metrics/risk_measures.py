@@ -1,10 +1,10 @@
-from typing import Tuple, Union
+
 import numpy as np
 
 
 def compute_risk_measures_simulation(
     m: int, loss_distribution: np.array, alpha: float
-) -> Tuple[float]:
+) -> tuple[float]:
     """ """
     expected_loss = np.mean(loss_distribution)
     stdev_loss = np.std(loss_distribution)
@@ -15,7 +15,7 @@ def compute_risk_measures_simulation(
 
 
 def compute_risk_measure_analytic(
-    N: int, alpha: float, pmf: np.array, cdf: np.array, c: Union[np.array, float]
+    N: int, alpha: float, pmf: np.array, cdf: np.array, c: np.array | float
 ):
     """ """
     var = c * np.interp(alpha, cdf, np.linspace(0, N, N + 1))

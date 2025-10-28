@@ -1,2 +1,2 @@
-# credit-risk-modeling
-Streamlit web app that contains main notes about Credit Risk Modeling
+# credit-risk-modelling
+Streamlit web app that contains main notes about Credit Risk Modelling
